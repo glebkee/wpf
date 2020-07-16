@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="" Height="356" Width="1071" ResizeMode="CanResize">
+    <Grid HorizontalAlignment="Left" Width="1061">
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="94,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="23" Margin="94,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textbox3" HorizontalAlignment="Left" Height="23" Margin="94,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textbox4" HorizontalAlignment="Left" Height="23" Margin="94,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textbox5" HorizontalAlignment="Left" Height="23" Margin="94,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="94,225,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        <ListView HorizontalAlignment="Left" Height="305" Margin="229,10,-12,0" VerticalAlignment="Top" Width="831" x:Name="listView1" SelectionChanged="listView1_SelectionChanged">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Возврат" Click="MenuItem_Click"></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="Id" Width="50" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Name" Width="190" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Price" Width="190" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Sell date" Width="190" DisplayMemberBinding="{Binding SellDate}"/>
+                    <GridViewColumn Header="Return date" Width="190" DisplayMemberBinding="{Binding ReturnDate}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" Margin="79,20,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="57,62,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,103,0,0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,144,0,0" TextWrapping="Wrap" Text="Sell date" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="28,187,0,0" TextWrapping="Wrap" Text="Return date" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
